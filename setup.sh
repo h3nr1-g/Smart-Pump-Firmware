@@ -43,8 +43,12 @@ if [ $? -ne 0 ]; then
 	echo "Creation of platformio project in directory $PROJECT_DIR failed. Abort."
 	exit 1
 fi
-		
-rm -rf $PROJECT_DIR/src
-ln -s $SCRIPT_DIR/src $PROJECT_DIR/src
+rm -rf $PROJECT_DIR/src && ln -s $SCRIPT_DIR/src $PROJECT_DIR/src
+
+
+echo "Install project dependencies"
+cd $PROJECT_DIR
+platformio lib install ArduinoJson
+
 
 echo "Initialization of platformio project in directory $PROJECT_DIR FINISHED."
