@@ -14,6 +14,8 @@ The ESP initialize it self and tries to establish a WiFi connection. If this is 
 
 ## How To Set Up The Firmware
 
+For the organi
+
 ```
 sudo apt-get install virtualenv python-pip python-dev
 git clone https://github.com/h3nr1-g/Smart-Pump-Firmware.git ~/sp-firmware
